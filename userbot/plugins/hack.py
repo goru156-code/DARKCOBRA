@@ -1,19 +1,19 @@
 # Made by @Danish_00 (Team Cobra)
 # Kang with credits else gay..
 
-from telethon import events
 import asyncio
-import os
-import sys
 import random
+from telethon.tl import functions, types
+from telethon import events
+from userbot import CMD_HELP, bot
 from userbot.utils import admin_cmd
-from userbot import bot as borg
+from . import HelpMenu, Symbols, hellbot, on_message
 
-@borg.on(admin_cmd(pattern="hack ?(.*)"))
+
+@on_message(admin_cmd(pattern="hack ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
-
     animation_interval = 0.7
 
     animation_ttl = range(0, 11)
